@@ -1,0 +1,9 @@
+https://www.w3schools.com/accessibility/accessibility_labels.php
+    - This explains the uses of fonts but more importantly the aria thats used and built into HTML
+
+https://www.npmjs.com/package/toastr
+    - Notifcations
+
+    Python / 
+    Javescript ( eaiser to run since we are running on node.JS)
+    https://www.npmjs.com/package/python-shell

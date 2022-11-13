@@ -1,0 +1,114 @@
+/* Use the rem because it is the relative size to the root font, if you dont use it content that is not font will not increase in size  */
+/*  you would not want to use px since it is not relative to anything just the screen an absoulte unit*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(180, 195, 216);
+  padding: 4rem;
+}
+
+button {
+  padding: .5rem 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: .25rem;
+}
+
+textarea {
+  width: 90%;
+  height: 100%;
+  font-size: 1rem;
+  resize: none;
+  background-color: transparent;
+  border: none;
+  color: aliceblue;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.run {
+  background-color: rgb(73, 165, 73);
+  font-weight: bold;
+  color: rgb(243, 243, 243);
+}
+
+.share {
+  background-color: rgb(206, 132, 206);
+  font-weight: bold;
+}
+
+/* controls for the buttons  */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.codingarea {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+/* Big blocks on the screen */
+.leftarea, .rightarea {
+  position: relative;
+  padding: 10px;
+  height: 600px;
+  background-color: rgb(62, 73, 87);
+}
+/* used to round out the edges on the left side box */
+.leftarea {
+  border-radius: .5rem 0 0 .5rem;
+}
+/* used to round out the edges on the left side box */
+.rightarea {
+  border-radius: 0 .5rem .5rem 0;
+}
+
+.tts, .clear {
+  cursor: pointer;
+}
+
+.tts {
+  opacity: 0;
+  position: absolute;
+  right: 10px;
+  fill: aliceblue;
+  transition: all .4s ease;
+}
+
+.clear {
+  opacity: 0;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  fill: aliceblue;
+  transition: all .4s ease;
+  transition-delay: 100ms;
+}
+
+.tts:hover {
+  fill: rgb(117, 255, 255);
+}
+
+.clear:hover {
+  fill: rgb(255, 70, 70);
+}
+
+.leftarea:hover > .tts {
+  opacity: 1;
+}
+
+.rightarea:hover > .tts {
+  opacity: 1;
+}
+
+.rightarea:hover > .clear {
+  opacity: 1;
+}
